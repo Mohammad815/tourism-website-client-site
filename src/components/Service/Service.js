@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Service.css'
 
 const Service = () => {
@@ -9,6 +10,7 @@ const Service = () => {
         .then(res=>res.json())
         .then(data=>setServices(data))
     },[])
+    console.log(services)
     return (
         <div>
             <h1>All Services</h1>
@@ -19,9 +21,12 @@ const Service = () => {
                        services.map(pd=>(
                         <div className="col-md-4">
                             <div className="product border border p-2 m-2">
-                                <h5>{pd?.name}</h5>
-                                <h5>{pd?.price}</h5>
                                 <h5><img className="img" src={pd?.image} alt="" /></h5>
+                                <h5>Name : {pd?.name}</h5>
+                                <h5>Description :{pd?.about}</h5>
+                              
+                                <Link to={`/order/${pd?._id}`}><button className="btn btn-danger m-2">Book Now</button></Link>
+                               
                                 {/* <button onClick={()=>handleDelete(pd?._id)} className="btn btn-danger m-2">Delete</button> */}
                                {/* <Link to={`/update/${pd._id}`}>
                                   <button className="btn btn-danger m-2">Update</button>

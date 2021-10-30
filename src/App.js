@@ -6,6 +6,7 @@ import Contact from './components/Contact/Contact';
 import Header from './components/Header/Header';
 import Home from './components/Home/Home';
 import Login from './components/Login/Login';
+import MyOrder from './components/MyOrder/MyOrder';
 import NotFound from './components/NotFount/NotFound';
 import Services from './components/Services/Services';
 import AuthProvider from './Context/AuthProvider';
@@ -34,6 +35,9 @@ function App() {
           </Route>
           <Route exact path="/contact">
             <Contact></Contact>
+          </Route>
+          <Route exact path="/order/:id">
+            <MyOrder></MyOrder>
           </Route>
           <Route exact path="*">
             <NotFound></NotFound>
