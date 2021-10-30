@@ -20,20 +20,19 @@ const Service = () => {
                     {
                        services.map(pd=>(
                         <div className="col-md-4">
-                            <div className="product border border p-2 m-2">
+                            <div className="product border border p-2 m-2  bg-light">
                                 <h5><img className="img" src={pd?.image} alt="" /></h5>
-                                <h5>Name : {pd?.name}</h5>
-                                <h5>Description :{pd?.about}</h5>
+                                <p>Name : {pd?.name}</p>
+                                <p>Description :{pd?.about}</p>
                               
-                                <Link to={`/order/${pd?._id}`}><button className="btn btn-danger m-2">Book Now</button></Link>
+                                <Link to={`/order/${pd?._id}`}><button className="btn btn-primary m-2">Book Now</button></Link> 
                                
-                                {/* <button onClick={()=>handleDelete(pd?._id)} className="btn btn-danger m-2">Delete</button> */}
                                {/* <Link to={`/update/${pd._id}`}>
                                   <button className="btn btn-danger m-2">Update</button>
                                </Link> */}
-                                {/* <button className="btn btn-danger m-2">Buy Now</button> */}
+                               
                             </div>
-                        </div>
+                         </div>
                        )) 
                     }
                 </div>

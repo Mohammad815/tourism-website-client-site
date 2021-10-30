@@ -12,20 +12,20 @@ const useFirebase = () => {
     const auth = getAuth();
     const provider = new GoogleAuthProvider();
     const SignWithGoogle = () => {
-        signInWithPopup(auth, provider)
-            .then((result) => {
+      return  signInWithPopup(auth, provider)
+            // .then((result) => {
             
-                console.log(result.user);
-                setUser(result.user)
+            //     console.log(result.user);
+            //     setUser(result.user)
 
-            })
-            .catch((error) => {
+            // })
+            // .catch((error) => {
               
-                const errorMessage = error.message;
-                console.log(errorMessage)
-                setError(errorMessage)
+            //     const errorMessage = error.message;
+            //     console.log(errorMessage)
+            //     setError(errorMessage)
             
-                })
+            //     })
   }
 
   const logout = () => {
@@ -45,32 +45,13 @@ const useFirebase = () => {
         }
       });
 },[])
-// const handleUserRegister = (email, password) => {
-//   createUserWithEmailAndPassword(auth, email, password)
-//     .then((result) => {
-//       console.log(result.user);
-//     })
-//     .catch((error) => {
-//       const errorMessage = error.message;
-//     });
-// };
-// const handleUserLogin = (email, password) => {
-//   signInWithEmailAndPassword(auth, email, password)
-//     .then((result) => {
-//       console.log(result.user);
-//     })
-//     .catch((error) => {
-//       const errorMessage = error.message;
-//     });
-// };
 
   return {
       user,
       error,
    SignWithGoogle,
    logout,
-//    handleUserRegister,
-//    handleUserLogin
+
 }
 }
 

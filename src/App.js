@@ -12,12 +12,15 @@ import MyOrder from './components/MyOrder/MyOrder';
 import NotFound from './components/NotFount/NotFound';
 import Services from './components/Services/Services';
 import AuthProvider from './Context/AuthProvider';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+import ManageAllOrder from './components/ManageOrder/ManageAllOrder';
 
 function App() {
   return (
     <div className="App">
       <AuthProvider>
       <Router>
+        <div className="main-wrap">
         <Header></Header>
         <Switch>
           <Route exact path="/">
@@ -41,14 +44,21 @@ function App() {
           <Route exact path="/manageServices">
             <ManageServices></ManageServices>
           </Route>
-          <Route exact path="/order/:id">
-            <MyOrder></MyOrder>
+          <Route exact path="/orders">
+            <ManageAllOrder></ManageAllOrder>
           </Route>
+          {/* <Route exact path="/order/:id">
+            <MyOrder></MyOrder>
+          </Route> */}
+          <PrivateRoute exact path="/order/:id">
+          <MyOrder></MyOrder>
+          </PrivateRoute>
           <Route exact path="*">
             <NotFound></NotFound>
           </Route>
 
         </Switch>
+        </div>
         <Footer></Footer>
       </Router>
       </AuthProvider>

@@ -1,10 +1,13 @@
+import Button from '@restart/ui/esm/Button';
 import React from 'react';
 import { Container, Nav, Navbar} from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import useAuth from '../../Hooks/useAuth';
 import './Header.css'
 
 
 const Header = () => {
+    const {user,logout} = useAuth();
     return (
         <Navbar className="navbar" collapseOnSelect expand="lg"   variant="dark">
             <Container>
@@ -16,7 +19,13 @@ const Header = () => {
                     <Link className="navLink" to="/services">Add Services</Link>
                     <Link className="navLink" to="/about">About</Link>
                     <Link className="navLink" to="/contact">Contact</Link>
-                    <Link className="navLink" to="/login">Login</Link>
+                    
+                    {
+                        user?.email ? 
+                        <Button className="btn btn-info" onClick={logout} variant="light">Logout</Button> :
+                        <Link className="navLink" to="/login">Login</Link>
+                    }
+                    <a className="text-black" href="login">{user?.displayName}</a>
                  
                 </Nav>
             </Navbar.Collapse>
