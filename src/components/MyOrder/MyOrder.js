@@ -8,7 +8,7 @@ const MyOrder = () => {
     const [singleService, setSingleService] = useState([])
 
     useEffect(()=>{
-        fetch(`http://localhost:4000/services/${id}`)
+        fetch(`https://polar-dawn-85433.herokuapp.com/services/${id}`)
         .then(res=>res.json())
         .then(data=>setSingleService(data))
     },[])
@@ -21,6 +21,7 @@ const MyOrder = () => {
             <Card.Body>
                 <Card.Title>{singleService.name}</Card.Title>
                 <h5>Price : {singleService.price}</h5>
+                
             </Card.Body>
             </Card>
             

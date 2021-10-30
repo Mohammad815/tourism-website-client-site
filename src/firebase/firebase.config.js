@@ -1,9 +1,9 @@
 const firebaseConfig = {
-    apiKey: "AIzaSyAzzD_dXuCDxBZkA8YnfuqOBQI4Od3aN5I",
-    authDomain: "healthcare-authenticatio-7ff05.firebaseapp.com",
-    projectId: "healthcare-authenticatio-7ff05",
-    storageBucket: "healthcare-authenticatio-7ff05.appspot.com",
-    messagingSenderId: "394749856462",
-    appId: "1:394749856462:web:a4d4889f6a49d772711e9f"
-  };
+  apiKey: "AIzaSyCdIg9E9oLbieDqg217HDYkEvl_UD8-I_g",
+  authDomain: "tourism-site-303c3.firebaseapp.com",
+  projectId: "tourism-site-303c3",
+  storageBucket: "tourism-site-303c3.appspot.com",
+  messagingSenderId: "744434955233",
+  appId: "1:744434955233:web:ecc5eb9972901cdf2dd8a0"
+};
   export default firebaseConfig;

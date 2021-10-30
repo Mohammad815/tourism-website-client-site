@@ -1,0 +1,15 @@
+.banner{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.banner .title{
+    color: #6059F6;
+}
+img{
+
+}
+.tours{
+    
+}

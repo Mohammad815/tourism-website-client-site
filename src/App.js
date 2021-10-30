@@ -1,11 +1,13 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Switch,Route } from 'react-router-dom';
+import Footer from './components/Footer/Footer';
 import './App.css';
 import About from './components/About/About';
 import Contact from './components/Contact/Contact';
 import Header from './components/Header/Header';
 import Home from './components/Home/Home';
 import Login from './components/Login/Login';
+import ManageServices from './components/ManageAllService/ManageServices';
 import MyOrder from './components/MyOrder/MyOrder';
 import NotFound from './components/NotFount/NotFound';
 import Services from './components/Services/Services';
@@ -36,6 +38,9 @@ function App() {
           <Route exact path="/contact">
             <Contact></Contact>
           </Route>
+          <Route exact path="/manageServices">
+            <ManageServices></ManageServices>
+          </Route>
           <Route exact path="/order/:id">
             <MyOrder></MyOrder>
           </Route>
@@ -44,6 +49,7 @@ function App() {
           </Route>
 
         </Switch>
+        <Footer></Footer>
       </Router>
       </AuthProvider>
     </div>
