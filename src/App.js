@@ -41,15 +41,12 @@ function App() {
           <Route exact path="/contact">
             <Contact></Contact>
           </Route>
-          <Route exact path="/manageServices">
-            <ManageServices></ManageServices>
-          </Route>
-          <Route exact path="/orders">
-            <ManageAllOrder></ManageAllOrder>
-          </Route>
-          {/* <Route exact path="/order/:id">
+          <PrivateRoute exact path='/order'>
             <MyOrder></MyOrder>
-          </Route> */}
+          </PrivateRoute>
+          <PrivateRoute exact path="/orders">
+            <ManageAllOrder></ManageAllOrder>
+          </PrivateRoute>
           <PrivateRoute exact path="/order/:id">
           <MyOrder></MyOrder>
           </PrivateRoute>

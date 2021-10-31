@@ -16,8 +16,9 @@ const Header = () => {
             <Navbar.Collapse className="text-black" id="responsive-navbar-nav">
                 <Nav className="ms-auto navbar">
                     <Link className="navLink" to="/home">Home</Link>
-                    <Link className="navLink" to="/services">Add Services</Link>
-                    <Link className="navLink" to="/about">About</Link>
+                    <Link className="navLink" to="/services">AddServices</Link>
+                    <Link className="navLink" to="/order">MyOrder</Link>
+                    <Link className="navLink" to="/orders">ManageOrder</Link>
                     <Link className="navLink" to="/contact">Contact</Link>
                     
                     {
