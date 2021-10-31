@@ -3,13 +3,17 @@ import React from 'react';
 import { Container, Nav, Navbar} from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import useAuth from '../../Hooks/useAuth';
+
 import './Header.css'
+
 
 
 const Header = () => {
     const {user,logout} = useAuth();
     return (
-        <Navbar className="navbar" collapseOnSelect expand="lg"   variant="dark">
+        <div >
+            
+            <Navbar className="navbar" collapseOnSelect expand="lg"   variant="dark">
             <Container>
             <Link className="navLink " to="/home">Global Travel Agency</Link>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -33,6 +37,7 @@ const Header = () => {
             </Container>
             
         </Navbar>
+        </div>
     );
 };
 

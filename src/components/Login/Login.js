@@ -15,9 +15,9 @@ const Login = () => {
         })
     }
     return (
-        <div>
-            <h2>Please Sign In With Google</h2>
-            <button onClick={handleGoogleLogin}>Sign With Google</button>
+        <div className="mt-5">
+            <h3>Please Sign In With Google</h3>
+            <button className="btn btn-primary mt-3" onClick={handleGoogleLogin}>Sign With Google</button>
         </div>
     );
 };
