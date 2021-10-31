@@ -13,9 +13,9 @@ const Footer = () => {
                             <li>5th flora,</li>
                             <li>700/D kings road,</li>
                             <li>green
-                                lane New York-1782,</li>
+                                lane Dhanmondi-1782,</li>
                             <li>+10 367 826 2567,</li>
-                            <li>contact@carpenter.com</li>
+                            <li>forhad@gmail.com</li>
                             
                         </ul>
                    </div>
