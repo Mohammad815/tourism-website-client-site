@@ -6,7 +6,7 @@ const Services = () => {
     const { register, handleSubmit } = useForm();
     const onSubmit = data =>{
   
-        fetch('http://localhost:4000/addServices',{
+        fetch('https://polar-dawn-85433.herokuapp.com/addServices',{
             method:"POST",
             headers:{
                 "Content-Type":"application/json"},

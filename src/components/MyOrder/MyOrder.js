@@ -21,7 +21,7 @@ const MyOrder = () => {
     const { register, handleSubmit } = useForm();
     const onSubmit = data => {
   
-        fetch('http://localhost:4000/orders',{
+        fetch('https://polar-dawn-85433.herokuapp.com/orders',{
             method:"POST",
             headers:{
                 "Content-Type":"application/json"},
@@ -34,19 +34,7 @@ const MyOrder = () => {
     };
 
     return (
-        // <div className = "order">
-            
-        //     <Card style={{ width: '18rem' }}>
-        //     <Card.Img variant="top" src={singleService.image} />
-        //     <Card.Body>
-        //         <Card.Title>{singleService.name}</Card.Title>
-        //         <h5>Price : ${singleService.price}</h5>
-                
-        //     </Card.Body>
-        //     </Card>
-            
-        // </div>
-
+    
         <form className="mt-4" onSubmit={handleSubmit(onSubmit)}>
                 <input defaultValue = {user.displayName} className="p-1 mb-2" {...register("username", { required: true, maxLength: 20 })}  />
                 <br />

@@ -7,13 +7,13 @@ const ManageAllOrder = () => {
     const [isDeleted, setDeleted] = useState(null)
 
     useEffect(()=>{
-        fetch("http://localhost:4000/orders")
+        fetch("https://polar-dawn-85433.herokuapp.com/orders")
         .then(res=>res.json())
         .then(data=>setOrder(data))
     },[isDeleted])
     console.log(order)
     const handleDelete = id => {
-        const url = `http://localhost:4000/deleteOrders/${id}`
+        const url = `https://polar-dawn-85433.herokuapp.com/deleteOrders/${id}`
         console.log(url)
         fetch(url,{
             method:"DELETE",
@@ -46,6 +46,7 @@ const ManageAllOrder = () => {
                             <h5>Email :{pd?.email}</h5>
                             <h5>City :{pd?.city}</h5>
                             <button onClick={()=>handleDelete(pd?._id)} className="btn btn-danger m-2">Delete</button>
+                            <button className="btn btn-danger m-2">Update</button>
                           
                         </div>
                     </div>

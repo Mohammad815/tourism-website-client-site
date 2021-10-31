@@ -7,7 +7,7 @@ import Contact from './components/Contact/Contact';
 import Header from './components/Header/Header';
 import Home from './components/Home/Home';
 import Login from './components/Login/Login';
-import ManageServices from './components/ManageAllService/ManageServices';
+
 import MyOrder from './components/MyOrder/MyOrder';
 import NotFound from './components/NotFount/NotFound';
 import Services from './components/Services/Services';
@@ -32,9 +32,9 @@ function App() {
           <Route exact path="/about">
             <About></About>
           </Route>
-          <Route exact path="/services">
+          <PrivateRoute exact path="/services">
             <Services></Services>
-          </Route>
+          </PrivateRoute>
           <Route exact path="/login">
             <Login></Login>
           </Route>
